@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <title>Paint Guard - Downlight Masking Tool</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans&display=swap">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+        <link rel="stylesheet" href="assets/css/css/styles-1.css">
+    </head>
+
+<body>
+    <nav class="navbar navbar-dark navbar-expand-lg sticky-top shadow bg-white">
+        <div class="container d-flex align-items-center justify-content-between">
+            <!-- Hamburger Menu -->
+            <button data-bs-target="#offcanvasMenu" data-bs-toggle="offcanvas" class="navbar-toggler me-2" type="button" style="color: var(--primary-color); background: var(--secondary-color);">
+                <span class="navbar-toggler-icon" style="color: var(--primary-color);"></span>
+            </button>
+            
+            <!-- Logo -->
+            <a class="navbar-brand ms-3" href="#">
+                <img src="assets/img/paint-guard-logo.png" alt="Paint Guard Logo" height="40">
+            </a>
+            
+            <!-- Main Navigation Links -->
+            <div class="collapse navbar-collapse nav-bar-space" id="mainNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link text-dark-blue" href="#about-paint-guard">Downlight Fast</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark-blue" href="#usage">How to Use</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark-blue" href="#shop">Shop</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark-blue" href="#paint-guard-specifications">Specifications</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark-blue" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            
+            <!-- Social Media Icons and Copyright Text -->
+            <div class="d-flex align-items-center nav-bar-space">
+                <p class="mb-0 text-dark-cheddar ms-3">Paint Guard ©</p>
+                <div class="ms-3"></div>
+                <!-- Add a wrapper for social media icons -->
+                <div class="social-icons ms-auto">
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="text-dark-blue mx-2">
+                        <i class="bi bi-facebook fs-4"></i>
+                    </a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="text-dark-blue mx-2">
+                        <i class="bi bi-youtube fs-4"></i>
+                    </a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="text-dark-blue mx-2">
+                        <i class="bi bi-google fs-4"></i>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </nav> 
+    <div class="offcanvas offcanvas-start text-white bg-orange" tabindex="-1" id="offcanvasMenu">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title">Menu</h5><button class="btn-close btn-close-white" type="button" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="nav flex-column">
+                <li class="nav-item"><a class="nav-link text-white" href="#about-paint-guard">About Paint Guard</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#usage">How to Use</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#paint-guard-specifications">Specifications</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#shop">Shop Now</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#contact">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
+    <section id="hero">
+        <div class="video-background">
+            <video autoplay muted loop playsinline poster="assets/img/hero-image.webp">
+                <source src="assets/videos/hero-video.webm" type="video/webm">
+                <source src="assets/videos/hero-video.mp4" type="video/mp4"> <!-- Add fallback -->
+            </video>
+            <div class="overlay"></div>
+        </div>
+        <div class="hero-content">
+            
+            <div class="d-flex logos mb-4">
+                <img src="assets/img/PaintGuardMaskYellow.png" alt="Yellow Mask Logo" class="logo">
+                <img src="assets/img/paint-guard-logo.png" alt="Main Logo" class="logo">
+                <img src="assets/img/PaintGuardMaskBlue.png" alt="Blue Mask Logo" class="logo">
+            </div>
+            <h1 class="display-2 fw-bold mb-3">Paint Guard</h1>
+            <div class="tagline mb-4"><span class="badge text-white bg-orange">Downlight Masking Tool</span></div>
+            <p class="lead mb-5">Built for pros, loved by DIYers: the ultimate time-saving downlighting masking tool.</p>
+            <p class="mb-5"><span class="text-orange">Precision Painting,</span><span class="text-orange">Downlights Done Right.</span></p>
+            <div class="d-flex justify-content-center">
+                <a class="btn btn-dark fs-3 shadow rounded-circle p-3" role="button" href="#about-paint-guard"><i class="bi bi-arrow-down"></i></a>
+            </div>
+        </div>
+    </section>   
+    <section id="about-paint-guard" class="paint-guard-info">
+        <div class="container">
+            <div class="heading-wrapper">
+                <h2 class="display-6 fw-bold text-center mb-4" 
+                    style="color: var(--bs-body-color); font-family: 'Fira Sans', sans-serif;">
+                    Effortless Downlight Protection with Paint Guard
+                </h2>
+            </div>        
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="bg-light shadow info-box p-4 rounded">
+                        <h2 class="display-6 fw-bold mb-4 position-relative d-inline-block">
+                            Paint Guard Is The <span id="dynamic-adjective">Neat</span>  Way To Paint Around Downlights
+                            <svg class="squiggly-line" viewBox="0 0 100 10" preserveAspectRatio="none">
+                                <path d="M0 5 q10 5 20 0 t20 0 q10 5 20 0 t20 0 q10 5 20 0" 
+                                    stroke="#FFA500" stroke-width="2" fill="none"/>
+                            </svg>
+                        </h2>
+                        <p class="lead">Often, for both home and professional painters and decorators, removing downlights presents added challenges—costing valuable time as you struggle to reinstall them securely and align them perfectly back into their original position.</p>
+                        <!-- Add the image here -->
+                        <img src="assets/img/downlight-nightmare.JPG" alt="Downlight Nightmare" class="img-fluid mt-4 border-orange" />
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row g-4">
+                        <div class="col-sm-6">
+                            <div class="bg-light shadow info-box text-center fancy-box bg-offwhite hover-orange p-4 rounded"><svg width="32" height="32" viewBox="0 0 32 32" fill="currentColor" class="mb-3">
+                                <path d="M16 32c-7.352 0-13.333-5.981-13.333-13.333v-14c0-0.184 0.076-0.36 0.209-0.484 0.135-0.127 0.32-0.195 0.497-0.181 6.444 0.384 9.361-1.151 12.168-3.817 0.257-0.245 0.661-0.245 0.917 0 2.805 2.668 5.735 4.2 12.168 3.817 0.181-0.009 0.363 0.056 0.497 0.181s0.209 0.303 0.209 0.484v14c0 7.352-5.981 13.333-13.333 13.333zM4 5.367v13.3c0 6.617 5.384 12 12 12s12-5.383 12-12v-13.3c-6.14 0.248-9.181-1.247-12-3.795-2.817 2.552-5.859 4.040-12 3.795z"></path>
+                            </svg>
+                                <h3 class="fw-bold mb-2">Save Time</h3>
+                                <p class="mb-0"> Save up to 5 – 6 minutes per light, per coat with Paint Guard. Cut time, slash costs. </p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="bg-light shadow info-box text-center fancy-box bg-offwhite hover-orange p-4 rounded"><svg width="32" height="32" viewBox="0 0 32 32" fill="currentColor" class="mb-3">
+                                <path d="M16 32c-7.352 0-13.333-5.981-13.333-13.333v-14c0-0.184 0.076-0.36 0.209-0.484 0.135-0.127 0.32-0.195 0.497-0.181 6.444 0.384 9.361-1.151 12.168-3.817 0.257-0.245 0.661-0.245 0.917 0 2.805 2.668 5.735 4.2 12.168 3.817 0.181-0.009 0.363 0.056 0.497 0.181s0.209 0.303 0.209 0.484v14c0 7.352-5.981 13.333-13.333 13.333zM4 5.367v13.3c0 6.617 5.384 12 12 12s12-5.383 12-12v-13.3c-6.14 0.248-9.181-1.247-12-3.795-2.817 2.552-5.859 4.040-12 3.795z"></path>
+                            </svg>
+                                <h3 class="fw-bold mb-2">No Masking Tape</h3>
+                                <p class="mb-0"> No messy masking tape! Paint Guard is your time-saving solution. </p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="bg-light shadow info-box text-center fancy-box bg-offwhite hover-orange p-4 rounded"><svg width="32" height="32" viewBox="0 0 32 32" fill="currentColor" class="mb-3">
+                                <path d="M16 32c-7.352 0-13.333-5.981-13.333-13.333v-14c0-0.184 0.076-0.36 0.209-0.484 0.135-0.127 0.32-0.195 0.497-0.181 6.444 0.384 9.361-1.151 12.168-3.817 0.257-0.245 0.661-0.245 0.917 0 2.805 2.668 5.735 4.2 12.168 3.817 0.181-0.009 0.363 0.056 0.497 0.181s0.209 0.303 0.209 0.484v14c0 7.352-5.981 13.333-13.333 13.333zM4 5.367v13.3c0 6.617 5.384 12 12 12s12-5.383 12-12v-13.3c-6.14 0.248-9.181-1.247-12-3.795-2.817 2.552-5.859 4.040-12 3.795z"></path>
+                            </svg>
+                                <h3 class="fw-bold mb-2">No Stress</h3>
+                                <p class="mb-0"> Removing downlights involves tricky clips or springs. Refitting takes time; misalignment looks sloppy. Paint Guard simplifies everything. </p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="bg-light shadow info-box text-center fancy-box bg-offwhite hover-orange p-4 rounded"><svg width="32" height="32" viewBox="0 0 32 32" fill="currentColor" class="mb-3">
+                                <path d="M16 32c-7.352 0-13.333-5.981-13.333-13.333v-14c0-0.184 0.076-0.36 0.209-0.484 0.135-0.127 0.32-0.195 0.497-0.181 6.444 0.384 9.361-1.151 12.168-3.817 0.257-0.245 0.661-0.245 0.917 0 2.805 2.668 5.735 4.2 12.168 3.817 0.181-0.009 0.363 0.056 0.497 0.181s0.209 0.303 0.209 0.484v14c0 7.352-5.981 13.333-13.333 13.333zM4 5.367v13.3c0 6.617 5.384 12 12 12s12-5.383 12-12v-13.3c-6.14 0.248-9.181-1.247-12-3.795-2.817 2.552-5.859 4.040-12 3.795z"></path>
+                            </svg>
+                                <h3 class="fw-bold mb-2">Use Paint Guard</h3>
+                                <p class="mb-0"> Keep downlight paint-free for a professional finish. Built for pros, loved by DIYers. </p>
+                                <!-- Horizontal Divider -->
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <section id="usage" class="using-paint-guard bg-light-orange" style="background: #ffffff;">
+        <div class="container">
+            
+            <div class="heading-wrapper">
+                <h2 class="display-6 fw-bold text-center mb-4" 
+                    style="color: var(--bs-body-color); font-family: 'Fira Sans', sans-serif;">
+                    Paint Guard Instructions And Video Clip
+                </h2>
+            </div>            
+            <!-- Tab Navigation -->
+            <ul class="nav nav-tabs border-warning justify-content-center mb-4" id="usageTabs" role="tablist">
+                <!-- Installation Tab -->
+                <li class="nav-item" role="presentation">
+                    <button class="active shadow nav-link d-flex flex-column align-items-center"
+                        id="installation-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#installation"
+                        type="button"
+                        role="tab"
+                        aria-controls="installation"
+                        aria-selected="true">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="currentColor">
+                            <path d="M16 32c-7.352 0-13.333-5.981-13.333-13.333v-14c0-0.184 0.076-0.36 0.209-0.484 0.135-0.127 0.32-0.195 0.497-0.181 6.444 0.384 9.361-1.151 12.168-3.817 0.257-0.245 0.661-0.245 0.917 0 2.805 2.668 5.735 4.2 12.168 3.817 0.181-0.009 0.363 0.056 0.497 0.181s0.209 0.303 0.209 0.484v14c0 7.352-5.981 13.333-13.333 13.333zM4 5.367v13.3c0 6.617 5.384 12 12 12s12-5.383 12-12v-13.3c-6.14 0.248-9.181-1.247-12-3.795-2.817 2.552-5.859 4.040-12 3.795zM20 23.333c-0.367 0-0.667-0.3-0.667-0.667v-1c0-0.367 0.3-0.667 0.667-0.667s0.667 0.3 0.667 0.667v1c0 0.367-0.3 0.667-0.667 0.667zM20 16.333c-0.367 0-0.667-0.3-0.667-0.667v-1c0-0.367 0.3-0.667 0.667-0.667s0.667 0.3 0.667 0.667v1c0 0.367-0.3 0.667-0.667 0.667zM24 19.333h-1c-0.367 0-0.667-0.3-0.667-0.667s0.3-0.667 0.667-0.667h1c0.367 0 0.667 0.3 0.667 0.667s-0.3 0.667-0.667 0.667zM17 19.333h-1c-0.368 0-0.667-0.3-0.667-0.667s0.299-0.667 0.667-0.667h1c0.367 0 0.667 0.3 0.667 0.667s-0.3 0.667-0.667 0.667zM22.828 22.161c-0.171 0-0.341-0.065-0.472-0.195l-0.711-0.705c-0.259-0.26-0.259-0.685 0-0.943 0.26-0.26 0.684-0.26 0.943 0l0.711 0.705c0.259 0.26 0.259 0.685 0 0.943-0.129 0.129-0.3 0.195-0.471 0.195zM17.881 17.215c-0.171 0-0.341-0.067-0.472-0.195l-0.711-0.709c-0.259-0.257-0.259-0.683 0-0.943 0.26-0.257 0.684-0.257 0.943 0l0.711 0.709c0.26 0.26 0.26 0.684 0 0.943-0.129 0.129-0.3 0.195-0.471 0.195zM22.12 17.212c-0.171 0-0.341-0.067-0.472-0.195-0.26-0.259-0.26-0.684 0-0.943l0.708-0.707c0.259-0.257 0.684-0.257 0.943 0 0.26 0.26 0.26 0.687 0 0.943l-0.708 0.707c-0.129 0.129-0.3 0.195-0.471 0.195zM17.171 22.161c-0.171 0-0.341-0.065-0.472-0.195-0.259-0.257-0.259-0.683 0-0.943l0.708-0.705c0.26-0.26 0.683-0.26 0.943 0 0.26 0.257 0.26 0.683 0 0.943l-0.708 0.705c-0.129 0.129-0.3 0.195-0.471 0.195zM20 22.333c-2.024 0-3.667-1.643-3.667-3.667s1.643-3.667 3.667-3.667 3.667 1.643 3.667 3.667-1.643 3.667-3.667 3.667zM20 16.333c-1.287 0-2.333 1.047-2.333 2.333s1.047 2.333 2.333 2.333 2.333-1.047 2.333-2.333-1.047-2.333-2.333-2.333zM12 23.333c-0.368 0-0.667-0.3-0.667-0.667v-0.667c0-0.367 0.299-0.667 0.667-0.667s0.667 0.3 0.667 0.667v0.667c0 0.367-0.299 0.667-0.667 0.667zM12 18.667c-0.368 0-0.667-0.3-0.667-0.667v-0.667c0-0.367 0.299-0.667 0.667-0.667s0.667 0.3 0.667 0.667v0.667c0 0.367-0.299 0.667-0.667 0.667zM14.667 20.667h-0.667c-0.368 0-0.667-0.3-0.667-0.667s0.299-0.667 0.667-0.667h0.667c0.368 0 0.667 0.3 0.667 0.667s-0.299 0.667-0.667 0.667zM10 20.667h-0.667c-0.368 0-0.667-0.3-0.667-0.667s0.299-0.667 0.667-0.667h0.667c0.368 0 0.667 0.3 0.667 0.667s-0.299 0.667-0.667 0.667zM13.885 22.552c-0.171 0-0.341-0.065-0.472-0.195l-0.472-0.472c-0.26-0.26-0.26-0.683 0-0.943s0.683-0.26 0.943 0l0.472 0.472c0.26 0.26 0.26 0.685 0 0.943-0.129 0.129-0.3 0.195-0.471 0.195zM10.588 19.255c-0.171 0-0.341-0.068-0.472-0.195l-0.473-0.473c-0.26-0.257-0.26-0.683 0-0.943 0.26-0.257 0.683-0.257 0.944 0l0.473 0.473c0.26 0.26 0.26 0.683 0 0.943-0.131 0.131-0.301 0.195-0.472 0.195zM13.413 19.252c-0.171 0-0.341-0.068-0.472-0.195-0.26-0.26-0.26-0.683 0-0.943l0.472-0.472c0.26-0.26 0.683-0.26 0.944 0 0.26 0.257 0.26 0.683 0 0.943l-0.472 0.472c-0.131 0.131-0.301 0.195-0.472 0.195zM10.115 22.552c-0.171 0-0.341-0.065-0.472-0.195-0.26-0.257-0.26-0.683 0-0.943l0.472-0.472c0.26-0.26 0.683-0.26 0.943 0s0.26 0.683 0 0.943l-0.472 0.472c-0.129 0.129-0.3 0.195-0.471 0.195zM12 22.667c-1.471 0-2.667-1.195-2.667-2.667s1.196-2.667 2.667-2.667 2.667 1.195 2.667 2.667-1.196 2.667-2.667 2.667zM12 18.667c-0.735 0-1.333 0.597-1.333 1.333s0.599 1.333 1.333 1.333 1.333-0.597 1.333-1.333-0.599-1.333-1.333-1.333zM16 15.333c-0.368 0-0.667-0.3-0.667-0.667v-0.667c0-0.367 0.299-0.667 0.667-0.667s0.667 0.3 0.667 0.667v0.667c0 0.367-0.299 0.667-0.667 0.667zM16 10.667c-0.368 0-0.667-0.3-0.667-0.667v-0.667c0-0.367 0.299-0.667 0.667-0.667s0.667 0.3 0.667 0.667v0.667c0 0.367-0.299 0.667-0.667 0.667zM18.667 12.667h-0.667c-0.367 0-0.667-0.3-0.667-0.667s0.3-0.667 0.667-0.667h0.667c0.367 0 0.667 0.3 0.667 0.667s-0.3 0.667-0.667 0.667zM14 12.667h-0.667c-0.368 0-0.667-0.3-0.667-0.667s0.299-0.667 0.667-0.667h0.667c0.368 0 0.667 0.3 0.667 0.667s-0.299 0.667-0.667 0.667zM17.885 14.552c-0.171 0-0.341-0.065-0.472-0.195l-0.472-0.472c-0.26-0.26-0.26-0.683 0-0.943 0.259-0.26 0.683-0.26 0.943 0l0.472 0.472c0.259 0.26 0.259 0.685 0 0.943-0.129 0.129-0.3 0.195-0.471 0.195zM14.588 11.255c-0.171 0-0.341-0.068-0.472-0.195l-0.473-0.473c-0.26-0.257-0.26-0.683 0-0.943 0.26-0.257 0.683-0.257 0.944 0l0.473 0.473c0.26 0.26 0.26 0.683 0 0.943-0.131 0.131-0.301 0.195-0.472 0.195zM17.415 11.252c-0.172 0-0.343-0.068-0.472-0.195-0.26-0.26-0.26-0.683 0-0.943l0.472-0.472c0.259-0.26 0.683-0.26 0.943 0 0.26 0.257 0.26 0.683 0 0.943l-0.472 0.472c-0.131 0.131-0.301 0.195-0.471 0.195zM14.115 14.552c-0.171 0-0.341-0.065-0.472-0.195-0.26-0.257-0.26-0.683 0-0.943l0.472-0.472c0.26-0.26 0.683-0.26 0.943 0s0.26 0.683 0 0.943l-0.472 0.472c-0.129 0.129-0.3 0.195-0.471 0.195zM16 14.667c-1.471 0-2.667-1.195-2.667-2.667s1.196-2.667 2.667-2.667c1.472 0 2.667 1.195 2.667 2.667s-1.195 2.667-2.667 2.667zM16 10.667c-0.735 0-1.333 0.597-1.333 1.333s0.599 1.333 1.333 1.333 1.333-0.597 1.333-1.333-0.599-1.333-1.333-1.333z"/>
+                        </svg>
+                        Assemble Paint Guard
+                    </button>
+                </li>
+                
+                <!-- Spraying Tab -->
+                <li class="nav-item" role="presentation">
+                    <button class="shadow nav-link d-flex flex-column align-items-center" id="spraying-tab" data-bs-toggle="tab" data-bs-target="#spraying" type="button" role="tab" aria-controls="spraying" aria-selected="false">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="currentColor">
+                            <path d="M1.333 32c-0.368 0-0.667-0.3-0.667-0.667 0-2.573 2.093-4.667 4.667-4.667 0.368 0 0.667 0.3 0.667 0.667s-0.299 0.667-0.667 0.667c-1.837 0-3.333 1.495-3.333 3.333 0 0.367-0.299 0.667-0.667 0.667zM22.667 32c-0.367 0-0.667-0.3-0.667-0.667 0-1.839-1.496-3.333-3.333-3.333-0.367 0-0.667-0.3-0.667-0.667s0.3-0.667 0.667-0.667c2.573 0 4.667 2.093 4.667 4.667 0 0.367-0.3 0.667-0.667 0.667zM12 32c-3.088 0-5.432-3.509-5.651-6.832-0.621-0.335-1.016-1.116-1.016-1.835v-1.333c0-0.476 0-1.647 1.333-1.935v-1.528c0-1.688 0.204-3.2 2.667-3.2h5.333c2.464 0 2.667 1.516 2.667 3.2v1.528c1.333 0.289 1.333 1.459 1.333 1.935v1.333c0 0.719-0.395 1.5-1.016 1.835-0.219 3.323-2.563 6.832-5.651 6.832zM9.333 16.667c-1.132 0-1.333 0.139-1.333 1.867v2.133c0 0.367-0.299 0.667-0.667 0.667-0.667 0-0.667 0.076-0.667 0.667v1.333c0 0.343 0.243 0.667 0.333 0.667 0.368 0 0.667 0.3 0.667 0.667 0 2.775 1.892 6 4.333 6s4.333-3.225 4.333-6c0-0.367 0.299-0.667 0.667-0.667 0.091 0 0.333-0.324 0.333-0.667v-1.333c0-0.591 0-0.667-0.667-0.667-0.368 0-0.667-0.3-0.667-0.667v-2.133c0-1.732-0.201-1.867-1.333-1.867h-5.333zM26.667 14.667c-0.367 0-0.667-0.3-0.667-0.667v-1c0-0.367 0.3-0.667 0.667-0.667s0.667 0.3 0.667 0.667v1c0 0.367-0.3 0.667-0.667 0.667zM26.667 7.667c-0.367 0-0.667-0.3-0.667-0.667v-1c0-0.367 0.3-0.667 0.667-0.667s0.667 0.3 0.667 0.667v1c0 0.367-0.3 0.667-0.667 0.667zM30.667 10.667h-1c-0.367 0-0.667-0.3-0.667-0.667s0.3-0.667 0.667-0.667h1c0.367 0 0.667 0.3 0.667 0.667s-0.3 0.667-0.667 0.667zM23.667 10.667h-1c-0.367 0-0.667-0.3-0.667-0.667s0.3-0.667 0.667-0.667h1c0.367 0 0.667 0.3 0.667 0.667s-0.3 0.667-0.667 0.667zM29.495 13.495c-0.171 0-0.341-0.065-0.472-0.195l-0.711-0.705c-0.259-0.26-0.259-0.685 0-0.943 0.26-0.26 0.684-0.26 0.943 0l0.711 0.705c0.259 0.26 0.259 0.685 0 0.943-0.129 0.129-0.3 0.195-0.471 0.195zM24.548 8.548c-0.171 0-0.341-0.067-0.472-0.195l-0.711-0.709c-0.259-0.257-0.259-0.683 0-0.943 0.26-0.257 0.684-0.257 0.943 0l0.711 0.709c0.26 0.26 0.26 0.684 0 0.943-0.129 0.129-0.3 0.195-0.471 0.195zM28.787 8.545c-0.171 0-0.341-0.067-0.472-0.195-0.26-0.259-0.26-0.684 0-0.943l0.708-0.707c0.259-0.257 0.684-0.257 0.943 0 0.26 0.26 0.26 0.687 0 0.943l-0.708 0.707c-0.129 0.129-0.3 0.195-0.471 0.195zM23.837 13.495c-0.171 0-0.341-0.065-0.472-0.195-0.259-0.257-0.259-0.683 0-0.943l0.708-0.705c0.26-0.26 0.683-0.26 0.943 0 0.26 0.257 0.26 0.683 0 0.943l-0.709 0.705c-0.128 0.129-0.299 0.195-0.469 0.195zM26.667 13.667c-2.024 0-3.667-1.643-3.667-3.667s1.643-3.667 3.667-3.667 3.667 1.643 3.667 3.667-1.643 3.667-3.667 3.667zM26.667 7.667c-1.287 0-2.333 1.047-2.333 2.333s1.047 2.333 2.333 2.333 2.333-1.047 2.333-2.333-1.047-2.333-2.333-2.333zM18.667 14.667c-0.367 0-0.667-0.3-0.667-0.667v-0.667c0-0.367 0.3-0.667 0.667-0.667s0.667 0.3 0.667 0.667v0.667c0 0.367-0.3 0.667-0.667 0.667zM18.667 10c-0.367 0-0.667-0.3-0.667-0.667v-0.667c0-0.367 0.3-0.667 0.667-0.667s0.667 0.3 0.667 0.667v0.667c0 0.367-0.3 0.667-0.667 0.667zM21.333 12h-0.667c-0.367 0-0.667-0.3-0.667-0.667s0.3-0.667 0.667-0.667h0.667c0.367 0 0.667 0.3 0.667 0.667s-0.3 0.667-0.667 0.667zM16.667 12h-0.667c-0.368 0-0.667-0.3-0.667-0.667s0.299-0.667 0.667-0.667h0.667c0.367 0 0.667 0.3 0.667 0.667s-0.3 0.667-0.667 0.667zM20.552 13.885c-0.171 0-0.341-0.065-0.472-0.195l-0.472-0.472c-0.26-0.26-0.26-0.683 0-0.943 0.259-0.26 0.683-0.26 0.943 0l0.472 0.472c0.259 0.26 0.259 0.685 0 0.943-0.129 0.129-0.3 0.195-0.471 0.195zM17.255 10.588c-0.172 0-0.341-0.068-0.472-0.195l-0.473-0.473c-0.26-0.257-0.26-0.683 0-0.943 0.26-0.257 0.683-0.257 0.944 0l0.473 0.473c0.26 0.26 0.26 0.683 0 0.943-0.131 0.131-0.303 0.195-0.472 0.195zM20.081 10.585c-0.172 0-0.343-0.068-0.472-0.195-0.26-0.26-0.26-0.683 0-0.943l0.472-0.472c0.259-0.26 0.683-0.26 0.943 0 0.26 0.257 0.26 0.683 0 0.943l-0.472 0.472c-0.131 0.131-0.301 0.195-0.471 0.195zM16.781 13.885c-0.171 0-0.341-0.065-0.472-0.195-0.26-0.257-0.26-0.683 0-0.943l0.472-0.472c0.26-0.26 0.683-0.26 0.943 0s0.26 0.683 0 0.943l-0.472 0.472c-0.129 0.129-0.3 0.195-0.471 0.195zM18.667 14c-1.472 0-2.667-1.195-2.667-2.667s1.195-2.667 2.667-2.667 2.667 1.195 2.667 2.667-1.195 2.667-2.667 2.667zM18.667 10c-0.735 0-1.333 0.597-1.333 1.333s0.599 1.333 1.333 1.333 1.333-0.597 1.333-1.333-0.599-1.333-1.333-1.333z"/>
+                        </svg>
+                        Use Paint Guard
+                    </button>
+                </li>                
+                <!-- Removal Tab -->
+                <li class="nav-item" role="presentation">
+                    <button class="shadow nav-link d-flex flex-column align-items-center"
+                        id="removal-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#removal"
+                        type="button"
+                        role="tab"
+                        aria-controls="removal"
+                        aria-selected="false">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="currentColor">
+                            <path d="M16.668 32h-1.333c-7.352 0-13.333-5.981-13.333-13.333v-14c0-0.184 0.076-0.36 0.209-0.484 0.133-0.127 0.321-0.196 0.496-0.181 5.913 0.356 9.616-0.759 12.833-3.817 0.257-0.245 0.661-0.245 0.917 0 3.22 3.059 6.916 4.173 12.837 3.817 0.191-0.019 0.361 0.055 0.493 0.181 0.137 0.125 0.209 0.304 0.209 0.484v14c0.004 7.352-5.977 13.333-13.329 13.333zM3.335 5.367v13.3c0 6.617 5.383 12 12 12h1.333c6.617 0 12-5.383 12-12v-13.3c-5.591 0.207-9.421-0.933-12.667-3.8-2.989 2.639-6.533 3.821-11.391 3.821v0c-0.415 0.004-0.839-0.004-1.276-0.021zM16.001 24.667c-4.412 0-8-3.588-8-8s3.588-8 8-8 8 3.588 8 8-3.588 8-8 8zM16.001 10c-3.676 0-6.667 2.991-6.667 6.667s2.991 6.667 6.667 6.667 6.667-2.991 6.667-6.667-2.991-6.667-6.667-6.667zM19.335 17.333h-6.667c-0.367 0-0.667-0.3-0.667-0.667s0.3-0.667 0.667-0.667h6.667c0.367 0 0.667 0.3 0.667 0.667s-0.3 0.667-0.667 0.667z"/>
+
+                        </svg>
+                        Remove Paint Guard
+                    </button>
+                </li>
+                
+                <!-- Safety Tab -->
+                <li class="nav-item" role="presentation">
+                    <button class="shadow nav-link d-flex flex-column align-items-center"
+                        id="safety-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#safety"
+                        type="button"
+                        role="tab"
+                        aria-controls="safety"
+                        aria-selected="false">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="currentColor">
+                            <path d="M31.333 32h-30.667c-0.368 0-0.667-0.3-0.667-0.667v-30.667c0-0.367 0.299-0.667 0.667-0.667h30.667c0.367 0 0.667 0.3 0.667 0.667v30.667c0 0.367-0.3 0.667-0.667 0.667zM1.333 30.667h29.333v-29.333h-29.333v29.333zM30.667 26.667h-29.333c-0.368 0-0.667-0.3-0.667-0.667s0.299-0.667 0.667-0.667h29.333c0.367 0 0.667 0.3 0.667 0.667s-0.3 0.667-0.667 0.667zM30.667 6.667h-29.333c-0.368 0-0.667-0.3-0.667-0.667s0.299-0.667 0.667-0.667h29.333c0.367 0 0.667 0.3 0.667 0.667s-0.3 0.667-0.667 0.667zM4 29.333h-1.333c-0.368 0-0.667-0.3-0.667-0.667s0.299-0.667 0.667-0.667h1.333c0.368 0 0.667 0.3 0.667 0.667s-0.299 0.667-0.667 0.667zM8 29.333h-1.333c-0.368 0-0.667-0.3-0.667-0.667s0.299-0.667 0.667-0.667h1.333c0.368 0 0.667 0.3 0.667 0.667s-0.299 0.667-0.667 0.667zM12 29.333h-1.333c-0.368 0-0.667-0.3-0.667-0.667s0.299-0.667 0.667-0.667h1.333c0.368 0 0.667 0.3 0.667 0.667s-0.299 0.667-0.667 0.667zM16 29.333h-1.333c-0.368 0-0.667-0.3-0.667-0.667s0.299-0.667 0.667-0.667h1.333c0.368 0 0.667 0.3 0.667 0.667s-0.299 0.667-0.667 0.667zM20 29.333h-1.333c-0.367 0-0.667-0.3-0.667-0.667s0.3-0.667 0.667-0.667h1.333c0.367 0 0.667 0.3 0.667 0.667s-0.3 0.667-0.667 0.667zM24 29.333h-1.333c-0.367 0-0.667-0.3-0.667-0.667s0.3-0.667 0.667-0.667h1.333c0.367 0 0.667 0.3 0.667 0.667s-0.3 0.667-0.667 0.667zM28 29.333h-1.333c-0.367 0-0.667-0.3-0.667-0.667s0.3-0.667 0.667-0.667h1.333c0.367 0 0.667 0.3 0.667 0.667s-0.3 0.667-0.667 0.667zM4 4h-1.333c-0.368 0-0.667-0.3-0.667-0.667s0.299-0.667 0.667-0.667h1.333c0.368 0 0.667 0.3 0.667 0.667s-0.299 0.667-0.667 0.667zM8 4h-1.333c-0.368 0-0.667-0.3-0.667-0.667s0.299-0.667 0.667-0.667h1.333c0.368 0 0.667 0.3 0.667 0.667s-0.299 0.667-0.667 0.667zM12 4h-1.333c-0.368 0-0.667-0.3-0.667-0.667s0.299-0.667 0.667-0.667h1.333c0.368 0 0.667 0.3 0.667 0.667s-0.299 0.667-0.667 0.667zM16 4h-1.333c-0.368 0-0.667-0.3-0.667-0.667s0.299-0.667 0.667-0.667h1.333c0.368 0 0.667 0.3 0.667 0.667s-0.299 0.667-0.667 0.667zM20 4h-1.333c-0.367 0-0.667-0.3-0.667-0.667s0.3-0.667 0.667-0.667h1.333c0.367 0 0.667 0.3 0.667 0.667s-0.3 0.667-0.667 0.667zM24 4h-1.333c-0.367 0-0.667-0.3-0.667-0.667s0.3-0.667 0.667-0.667h1.333c0.367 0 0.667 0.3 0.667 0.667s-0.3 0.667-0.667 0.667zM28 4h-1.333c-0.367 0-0.667-0.3-0.667-0.667s0.3-0.667 0.667-0.667h1.333c0.367 0 0.667 0.3 0.667 0.667s-0.3 0.667-0.667 0.667zM11.333 22.825c-0.109 0-0.217-0.027-0.316-0.081-0.216-0.113-0.351-0.34-0.351-0.585v-12.317c0-0.245 0.135-0.472 0.351-0.584 0.216-0.117 0.477-0.107 0.683 0.029l9.333 6.159c0.187 0.123 0.3 0.331 0.3 0.555s-0.112 0.435-0.3 0.557l-9.333 6.159c-0.111 0.073-0.239 0.109-0.367 0.109zM12 11.081v9.841l7.456-4.919-7.456-4.923z"/>
+                        </svg>
+                        Paint Guard Video
+                    </button>
+                </li>
+            </ul>
+            
+            <!-- Tab Content -->
+            <div class="tab-content" id="usageTabsContent">
+                
+                <!-- Tab Pane: Installation -->
+                <div class="tab-pane fade show active" id="installation" role="tabpanel" aria-labelledby="installation-tab">
+                    <div class="row justify-content-center g-4">
+                        <div class="col-md-6">
+                            <div class="card bg-light shadow">
+                                <h5 class="text-center card-title mb-3">Step 1 – With Spring Or Elastic Band</h5>
+                                <a href="assets/img/instructions-step-one.webp" data-lightbox="assemble">
+                                    <img class="rounded img-fluid card-img-top border-orange" src="assets/img/instructions-step-one.webp" alt="Step 1" loading="lazy">
+                                </a>
+                                <div class="card-body">
+                                    <p class="card-text">Place one end over the nodule and secure, stretch spring or band over the opposite nodule and secure.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card bg-light shadow">
+                                <h5 class="text-center card-title mb-3">Step 2 – Now Ready To Use</h5>
+                                <a href="assets/img/instructions-step-two.png" data-lightbox="assemble">
+                                    <img class="rounded img-fluid card-img-top border-orange" src="assets/img/instructions-step-two.png" alt="Step 2" loading="lazy">
+                                </a>
+                                <div class="card-body">
+                                    <p class="card-text">Check that elastic band or spring is firmly attached.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tab Pane: Spraying -->
+                <div class="tab-pane fade" id="spraying" role="tabpanel" aria-labelledby="spraying-tab">
+                    <div class="row justify-content-center g-4">
+                        <div class="col-md-6">
+                            <div class="card bg-light shadow">
+                                <h5 class="text-center card-title mb-3">Step 1 – Attach To Downlight</h5>
+                                <a href="assets/img/Attach-Paint-Guard.webp" data-lightbox="use">
+                                    <img class="rounded img-fluid card-img-top border-orange" src="assets/img/Attach-Paint-Guard.webp" alt="Step 1" loading="lazy">
+                                </a>
+                                <div class="card-body">
+                                    <p class="card-text">Carefully ease the downlight from the ceiling about 1mm. Open the Paint Guard using the finger holes provided with one or both hands. Open the Paint Guard enough to cover the downlight. Ensure it remains open and press up to the ceiling around the downlight, and close making sure the lip of the paint guard are between the ceiling and downlight.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card bg-light shadow">
+                                <h5 class="text-center card-title mb-3">Step 3 – Ready For Painting</h5>
+                                <a href="assets/img/Paint-Guard-Attached.png" data-lightbox="use">
+                                    <img class="rounded img-fluid card-img-top border-orange" src="assets/img/Paint-Guard-Attached.png" alt="Step 3" loading="lazy">
+                                </a>
+                                <div class="card-body">
+                                    <p class="card-text">Your fixture is protected and your ceiling is ready for painting. Lights still work, and the paint guard can be left in situ until all coats are applied.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tab Pane: Removal -->
+                <div class="tab-pane fade" id="removal" role="tabpanel" aria-labelledby="removal-tab">
+                    <div class="row justify-content-center g-4">
+                        <div class="col-md-3">
+                            <div class="card bg-light shadow">
+                                <h5 class="text-center card-title mb-3">Safety</h5>
+                                <a href="assets/img/Safety.png" data-lightbox="remove">
+                                    <img class="rounded img-fluid card-img-top border-orange" src="assets/img/Safety.png" alt="Safety" loading="lazy">
+                                </a>
+                                <div class="card-body">
+                                    <p class="card-text">As most downlights are on ceilings, step ladders are used. Make sure they are positioned correctly, and if needed, have someone steady them.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card bg-light shadow">
+                                <h5 class="text-center card-title mb-3">Removal</h5>
+                                <a href="assets/img/Remove-Paint-Guard.webp" data-lightbox="remove">
+                                    <img class="rounded img-fluid card-img-top border-orange" src="assets/img/Remove-Paint-Guard.webp" alt="Removal" loading="lazy">
+                                </a>
+                                <div class="card-body">
+                                    <p class="card-text">To remove the Paint Guard, simply place your fingers in the holes provided, with one or both hands, pull down slightly open Paint Guard and remove. Make sure you don't scratch the ceiling when removing.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card bg-light shadow">
+                                <h5 class="text-center card-title mb-3">Spraying</h5>
+                                <a href="assets/img/Spraying.png" data-lightbox="remove">
+                                    <img class="rounded img-fluid card-img-top border-orange" src="assets/img/Spraying.png" alt="Spraying" loading="lazy">
+                                </a>
+                                <div class="card-body">
+                                    <p class="card-text">To spray ceilings there is a rubber bung which fits neatly into the opening at the top and side access holes. Remove bungs if lights are to be used. Simply insert when spraying and remove, to allow the lights to be used.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card bg-light shadow">
+                                <h5 class="text-center card-title mb-3">Reuse</h5>
+                                <a href="assets/img/Reuse.png" data-lightbox="remove">
+                                    <img class="rounded img-fluid card-img-top border-orange" src="assets/img/Reuse.png" alt="Reuse" loading="lazy">
+                                </a>
+                                <div class="card-body">
+                                    <p class="card-text">Carefully clean with warm water and reuse.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tab Pane: Safety -->
+                <div class="tab-pane fade" id="safety" role="tabpanel" aria-labelledby="safety-tab">
+                    <div class="container text-center py-5">
+                        <h2 class="display-6 fw-bold mb-4">
+                            Master Paint Guard <span class="text-orange">in seconds</span> with our clear, step-by-step instruction video, perfect results, hassle-free!
+                        </h2>
+                        <p class="lead mb-5">Introduction Video – 30 seconds</p>
+                        <a class="btn fs-3 shadow btn-orange rounded-circle p-3" role="button" href="#video-section">
+                            <i class="bi bi-arrow-down"></i>
+                        </a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+    <section id="video-section" class="video-instruction bg-dark-blue">
+        <div class="container-fluid h-100">
+            <div class="row justify-content-center align-items-center h-100">
+                <div class="col-12">
+                    <!-- Background Video -->
+                    <div class="video-wrapper position-relative h-100">
+                        <iframe id="bg-video" class="w-100 h-100 object-fit-cover" 
+                            src="https://www.youtube.com/embed/0aow6kkjWlQ?autoplay=1&mute=1&loop=1&playlist=0aow6kkjWlQ&controls=0" 
+                            frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        
+                        <!-- Overlay for bg-video -->
+                        <div class="overlay-bg-video"></div>
+                        
+                        <!-- Play Button -->
+                        <a href="javascript:void(0)" class="play-button position-absolute top-50 start-50 translate-middle" data-bs-toggle="modal" data-bs-target="#videoModal">
+                            <span class="play-icon">
+                                <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="30" cy="30" r="30" fill="#fff" stroke="#000" stroke-width="2"/>
+                                    <path d="M29.9999 22.5L44.9999 30L29.9999 37.5V22.5Z" fill="#000"/>
+                                </svg>
+                            </span>
+                            <p class="mt-2">Play Instruction Video</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Modal for Full-Screen Video Playback -->
+        <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content bg-transparent border-0">
+                    <div class="modal-header border-0">
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body p-0">
+                        <iframe id="mainVideo" class="w-100 h-100 object-fit-cover" 
+                            src="https://www.youtube.com/embed/RHrUwL20QGo" 
+                            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="shop" class="shop-section bg-light-orange py-5">
+        <div class="container text-center">
+            <h2 class="display-6 fw-bold mb-4">Shop Paint Guard</h2>
+            <div class="row justify-content-center g-4">
+                <!-- Yellow Paint Guard -->
+                <div class="col-md-6 col-lg-5">
+                    <div class="card shadow h-100">
+                        <a href="assets/img/Paint-Guard-Yellow.png" data-lightbox="product">
+                            <img src="assets/img/Paint-Guard-Yellow.png" class="card-img-top" alt="Paint Guard Yellow">
+                        </a>
+                        <div class="card-body text-start">
+                            <h3 class="card-title h5">Paint Guard – Yellow (90mm)</h3>
+                            <p class="card-text">Professional-grade reusable paint guard in vibrant yellow.</p>
+                            <p class="fw-bold mb-2 price" data-lookup-key="yellowPaintGuard" aria-live="polite">Price: Loading...</p>
+                            <div class="mb-3">
+                                <label for="quantity-yellow" class="form-label">Quantity:</label>
+                                <input type="number" id="quantity-yellow" class="form-control" value="1" min="1" max="100" aria-label="Quantity for Yellow Paint Guard"/>
+                            </div>
+                            <button id="buy-yellow" data-lookup-key="yellowPaintGuard" class="btn btn-warning text-white fw-bold w-100">Buy Yellow</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Blue Paint Guard -->
+                <div class="col-md-6 col-lg-5">
+                    <div class="card shadow h-100">
+                        <a href="assets/img/Paint-Guard-Blue.png" data-lightbox="product">
+                            <img src="assets/img/Paint-Guard-Blue.png" class="card-img-top" alt="Paint Guard Blue">
+                        </a>
+                        <div class="card-body text-start">
+                            <h3 class="card-title h5">Paint Guard – Blue (80mm)</h3>
+                            <p class="card-text">Professional-grade reusable paint guard in Blue.</p>
+                            <p class="fw-bold mb-2 price" data-lookup-key="bluePaintGuard" aria-live="polite">Price: Loading...</p>
+                            <div class="mb-3">
+                                <label for="quantity-blue" class="form-label">Quantity:</label>
+                                <input type="number" id="quantity-blue" class="form-control" value="1" min="1" max="100" aria-label="Quantity for Blue Paint Guard"/>
+                            </div>
+                            <button id="buy-blue" data-lookup-key="bluePaintGuard" class="btn btn-primary fw-bold w-100">Buy Blue</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="paint-guard-specifications" class="paint-gaurdspcs">
+        <div class="container">
+            <!-- Unified Heading -->
+            <h2 class="display-6 fw-bold mb-4 text-center">Product Specifications</h2>
+            
+            <div class="row align-items-start">
+                <!-- Specifications List -->
+                <div class="col-md-6 text-center">
+                    <div class="card shadow mx-auto" style="max-width: 700px;">
+                        <ul class="list-group list-group-flush text-start">
+                            <li class="list-group-item"><strong>Material:</strong><span> Durable Polypropylene (PP)</span></li>
+                            <li class="list-group-item"><strong>Dimensions:</strong><span> Circumference from 80mm+, Thickness 1mm</span></li>
+                            <li class="list-group-item"><strong>Weight:</strong><span> Lightweight at 20 grams</span></li>
+                            <li class="list-group-item"><strong>Heat Resistance:</strong><span> Withstands up to 100°C</span></li>
+                            <li class="list-group-item"><strong>Durability:</strong><span> Built to last with wear-resistant material</span></li>
+                            <li class="list-group-item"><strong>Usability:</strong><span> Quick and easy to install/remove</span></li>
+                            <li class="list-group-item"><strong>Chemical Resistance:</strong><span> Stands up to common paint chemicals</span></li>
+                            <li class="list-group-item"><strong>Reusability:</strong><span> Reusable for cost savings and eco-friendliness</span></li>
+                            <li class="list-group-item"><strong>Compatibility:</strong><span> Fits most standard recessed downlights</span></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Image Info Box -->
+                <div class="col-md-6 text-center">
+                    <div class="info-box bg-light shadow p-4 rounded h-100 d-flex flex-column justify-content-center">
+                        <img src="assets/img/specifications.png" alt="Specifications Image" class="rounded img-fluid mb-3" />
+                        <p class="lead">Detailed specifications for Paint Guard.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section bg-light-orange py-5">
+        <div class="container">
+            <div class="row align-items-start">
+                
+                <!-- Left Column: FAQs -->
+                <div class="col-md-6 mb-4 faq-box">
+                    <div class="p-4 bg-white shadow-sm rounded h-100">
+                        <h2 class="display-6 fw-bold mb-4">Frequently Asked Questions</h2>
+                        
+                        <!-- Accordion / FAQ -->
+                        <div class="accordion accordion-flush" id="faqAccordion">
+                            
+                            <!-- FAQ Item 1 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="faq1-heading">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="false" aria-controls="faq1">
+                                        What payment methods do you accept?
+                                    </button>
+                                </h2>
+                                <div id="faq1" class="accordion-collapse collapse" aria-labelledby="faq1-heading" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        We accept all major credit and debit cards, as well as secure payment options like PayPal.
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- FAQ Item 2 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="faq2-heading">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                                        How much is shipping and how long will it take?
+                                    </button>
+                                </h2>
+                                <div id="faq2" class="accordion-collapse collapse" aria-labelledby="faq2-heading" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Delivery is calculated at checkout based on your location. Orders are typically dispatched within 1–2 business days.
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- FAQ Item 3 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="faq3-heading">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                                        Can I return the product if it doesn’t fit my downlights?
+                                    </button>
+                                </h2>
+                                <div id="faq3" class="accordion-collapse collapse" aria-labelledby="faq3-heading" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Yes, we offer a 14-day return policy for unused items in their original condition. Please see our <a href="OurPolicy.html">Returns & Refunds</a> page for full details.
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- FAQ Item 4 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="faq4-heading">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+                                        Paint Guard: Terms, Conditions & Privacy
+                                    </button>
+                                </h2>
+                                <div id="faq4" class="accordion-collapse collapse" aria-labelledby="faq4-heading" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Please see our <a href="OurPolicy.html">Terms and Conditions</a> page for full details.
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Column: Contact Form -->
+                <div class="col-md-6 mb-4 contact-box">
+                    <div class="p-4 bg-white shadow-sm rounded h-100">
+                        <h2 class="display-6 fw-bold mb-4">Contact Us</h2>
+                        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thankyou.html/" class="needs-validation" novalidate>
+                            <input type="hidden" name="form-name" value="contact">
+                            <p class="d-none">
+                                <input name="bot-field">
+                            </p>
+                            
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Your Name</label>
+                                <input type="text" class="form-control" id="name" name="name" required>
+                                <div class="invalid-feedback">Please enter your name.</div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Your Email</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                                <div class="invalid-feedback">Please enter a valid email address.</div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Your Message</label>
+                                <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                                <div class="invalid-feedback">Please enter a message.</div>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center text-white bg-dark-footer py-5">
+        <div class="container">
+            <!-- Social Media Icons -->
+            <div class="d-flex justify-content-center gap-4 mb-4">
+                <a href="#" target="_blank" rel="noopener noreferrer">
+                    <div class="social-icon rounded-circle p-3">
+                        <i class="bi bi-x"></i>
+                    </div>
+                </a>
+                <a href="#" target="_blank" rel="noopener noreferrer">
+                    <div class="social-icon rounded-circle p-3">
+                        <i class="bi bi-facebook"></i>
+                    </div>
+                </a>
+                <a href="#" target="_blank" rel="noopener noreferrer">
+                    <div class="social-icon rounded-circle p-3">
+                        <i class="bi bi-youtube"></i>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- Text Content -->
+            <p class="mb-3">Built for pros, loved by DIYers.</p>
+            <p class="mb-3">Paint Guard</p>
+            <p class="mb-3">East Renfrewshire</p>
+            <p class="mb-3">T: + **********</p>
+            <p>All rights reserved - Paint Guard ©</p>
+        </div>
+    </footer>
+    
+    <!-- jQuery (optional but loaded early if needed) -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    
+    <!-- Bootstrap JS Bundle (includes Popper.js) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Lightbox -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    
+    <!-- Stripe JS Core Library (Required for Stripe Checkout) -->
+    <script src="https://js.stripe.com/v3/"></script>
+    
+        <!-- Your Main Script -->
+    <script src="assets/js/js/scripts.js"></script>
+      
+    
+</body>
+</html>
