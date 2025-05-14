@@ -558,10 +558,11 @@
                 <div class="col-md-6 mb-4 contact-box">
                     <div class="p-4 bg-white shadow-sm rounded h-100">
                         <h2 class="display-6 fw-bold mb-4">Contact Us</h2>
-                        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thankyou.html/" class="needs-validation" novalidate>
+                        <!--Contact form for Resend -->
+                        <form name="contact" class="needs-validation" novalidate id="contact-form">
                             <input type="hidden" name="form-name" value="contact">
                             <p class="d-none">
-                                <input name="bot-field">
+                                <input name="bot-field" id="bot-field">
                             </p>
                             
                             <div class="mb-3">
