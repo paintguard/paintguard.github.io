@@ -2,73 +2,54 @@
    GLOBAL VARIABLES & THEME COLORS
    ========================================================================== */
 :root {
-  --primary-color: #003366;         /* Dark blue */
-  --secondary-color: #FFA500;       /* Orange */
+  --primary-color: #003366;
+  --secondary-color: #FFA500;
   --secondary-color-rgb: 255, 165, 0;
-  --secondary-color-dark: #cc8400;  /* Darker orange */
+  --secondary-color-dark: #cc8400;
 }
 
 /* ==========================================================================
-   BOOTSTRAP OFF CANVAS MENU WIDTH, OPACITY AND TEXT COLOUR
+   BOOTSTRAP OFF CANVAS MENU
    ========================================================================== */
-    
-    .offcanvas {
-      
-      --bs-offcanvas-width: 250px !important;
-      opacity: 0.9;
-      color: #161543 !important;
-      
-    }
-
+.offcanvas {
+  --bs-offcanvas-width: 250px;
+  opacity: 0.9;
+  color: #161543;
+}
 .offcanvas-body .nav-link {
-  
-      color: #161543 !important;
+  color: #161543;
 }
-
-
 @media (max-width: 991.98px) {
-      .social-icons {
-        display: none !important; /* Hide icons on mobile */
-    }
+  .social-icons {
+    display: none;
+  }
 }
-    
-/* Ensure social icons are aligned and don’t stack */
 .social-icons {
-      display: flex;
-      gap: 10px; /* Space between icons */
-    
+  display: flex;
+  gap: 10px;
 }
-
 .social-icons a {
-      color: #333; /* Icon color */
-      font-size: 1.2rem; /* Icon size */
-    
+  color: #333;
+  font-size: 1.2rem;
 }
-
 
 /* ==========================================================================
    BACKGROUND & UTILITY CLASSES
    ========================================================================== */
 .bg-dark-blue {
-  background-color: var(--bs-white) !important;
+  background-color: #fff;
 }
 .bg-orange {
-  background-color: var(--secondary-color) !important;
+  background-color: var(--secondary-color);
 }
-.bg-light-orange {
-  background-color: #f8f9fa !important;
-}
-.section-gray {
-  background-color: #f8f9fa;
-}
-.bg-offwhite {
+.bg-light-orange, .section-gray, .bg-offwhite {
   background-color: #f8f9fa;
 }
 .bg-dark-footer {
-  background-color: #1F1D42 !important;
+  background-color: #1F1D42;
 }
 .text-dark-blue {
-  color: #1F1D42 !important;
+  color: #1F1D42;
 }
 .text-dark-cheddar {
   color: #D77F1B;
@@ -82,7 +63,7 @@
    ========================================================================== */
 .btn-orange {
   background-color: var(--secondary-color);
-  color: white;
+  color: #fff;
   border: none;
 }
 .btn-orange:hover {
@@ -94,25 +75,25 @@
    ========================================================================== */
 .hover-orange:hover {
   background-color: #ff9800;
-  color: white;
+  color: #fff;
 }
 .play-button:hover {
   transform: scale(1.1);
 }
 
 /* ==========================================================================
-   IMAGE STYLING & LIGHTBOX CUSTOMIZATION
+   IMAGE STYLING & LIGHTBOX
    ========================================================================== */
 .border-orange {
   border: 2px solid #FFA500;
   border-radius: 8px;
 }
 .lightboxOverlay {
-  background: rgba(0, 51, 102, 0.8) !important;
+  background: rgba(0, 51, 102, 0.8);
 }
 .lightbox .lb-close {
-  top: 20px !important;
-  right: 20px !important;
+  top: 20px;
+  right: 20px;
   background-color: rgba(255, 255, 255, 0.9);
   color: #000;
   border-radius: 50%;
@@ -121,7 +102,6 @@
   line-height: 40px;
   text-align: center;
   font-size: 24px;
-  z-index: 9999;
 }
 .lightbox .lb-image {
   max-height: 80vh;
@@ -132,21 +112,13 @@
 .lightbox .lb-image:hover {
   transform: scale(1.02);
 }
-.lb-prev,
-.lb-next {
+.lb-prev, .lb-next {
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 4px;
   padding: 10px;
-  filter: brightness(1.2);
 }
-.lb-prev:hover,
-.lb-next:hover {
+.lb-prev:hover, .lb-next:hover {
   background-color: rgba(0, 0, 0, 0.8);
-}
-.lightbox-image {
-  display: block;
-  max-width: 100%;
-  height: auto;
 }
 
 /* ==========================================================================
@@ -162,8 +134,8 @@
   margin-bottom: 0.5rem;
 }
 .play-button svg {
-  fill: black;
-  stroke: black;
+  fill: #000;
+  stroke: #000;
 }
 
 /* ==========================================================================
@@ -173,13 +145,13 @@
   background-color: #f8f9fa;
   padding: 1rem;
   border-radius: 0.5rem;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 .fancy-box:hover {
-  background-color: var(--secondary-color) !important;
+  background-color: var(--secondary-color);
 }
 .info-box {
-  background-color: var(--offwhite);
+  background-color: #f8f9fa;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 1rem;
@@ -207,10 +179,15 @@
   height: 100%;
   z-index: 1;
 }
-.video-background video {
-  width: 100%;
-  height: 100%;
+.video-background iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 110vw; /* Overscale to fill width, remove black bars */
+  height: 110vh; /* Overscale to fill height */
+  transform: translate(-50%, -50%);
   object-fit: cover;
+  z-index: 1;
 }
 .overlay {
   position: absolute;
@@ -218,7 +195,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.5);
   z-index: 2;
 }
 .hero-content {
@@ -227,20 +204,18 @@
   left: 10%;
   transform: translateY(-50%);
   z-index: 3;
-  color: white;
+  color: #fff;
   text-align: left;
   padding: 0;
-  margin: 0;
 }
 .logos {
   display: flex;
   justify-content: flex-start;
   gap: 10px;
-  padding: 0;
-  margin: 0;
 }
 .logos img {
   max-height: 80px;
+  width: auto;
 }
 
 /* ==========================================================================
@@ -256,8 +231,10 @@
   .logos {
     justify-content: center;
   }
-  .d-flex.justify-content-center {
-    justify-content: center;
+  .video-background iframe {
+    width: 100vw; /* Ensure full width on mobile */
+    height: 100vh; /* Ensure full height on mobile */
+    transform: translate(-50%, -50%);
   }
   .fancy-box {
     margin-bottom: 20px;
@@ -267,33 +244,12 @@
     margin-top: 2rem;
   }
   #usage {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding: 5rem 0;
   }
-  #usage .container {
-    margin-top: 2rem;
-  }
-  #contact.contact-section {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+  #contact.contact-section, #shop.shop-section, #paint-guard-specifications.paint-gaurdspcs {
+    padding: 4rem 0;
     min-height: auto;
   }
-  #shop.shop-section {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-    min-height: auto;
-  }
-  
-  #paint-guard-specifications.paint-gaurdspcs {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-    min-height: auto;
-  }
-  
-  
-  
-  
-  
 }
 @media (max-width: 992px) {
   .navbar-brand {
@@ -304,21 +260,15 @@
   }
 }
 
-
 /* ==========================================================================
    TYPOGRAPHY & FONT STYLES
    ========================================================================== */
-.card-title,
-.nav-link,
-h2 {
+.card-title, .nav-link, h2 {
   font-family: 'Fira Sans', sans-serif;
 }
-
-/* Ensure full height for the entire page */
 html, body {
   height: 100%;
   margin: 0;
-  padding: 0;
   overflow-x: hidden;
 }
 
@@ -401,32 +351,23 @@ html, body {
    CONTACT SECTION
    ========================================================================== */
 #contact.contact-section {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
+  padding: 6rem 0;
   min-height: 100vh;
 }
-.faq-box,
-.contact-box {
-  
+.faq-box, .contact-box {
   padding-top: 5rem;
   padding-left: 0;
   padding-right: 0;
 }
-
 @media (min-width: 768px) {
   .faq-box {
-    
     padding-right: 1rem;
   }
   .contact-box {
-    
     padding-left: 1rem;
   }
 }
-
-
-.faq-box .bg-white,
-.contact-box .bg-white {
+.faq-box .bg-white, .contact-box .bg-white {
   height: 100%;
 }
 .accordion-button {
@@ -443,70 +384,49 @@ html, body {
    ABOUT PAINT GUARD SECTION
    ========================================================================== */
 #about-paint-guard.paint-guard-info {
-  padding-top: 5rem;
-  padding-bottom: 10rem;
+  padding: 5rem 0 10rem;
   min-height: 100vh;
 }
-
 
 /* ==========================================================================
-   USING PAINT GUARD SECTION - TABBED CONTENT - INSTRUCTIONS
+   USING PAINT GUARD SECTION
    ========================================================================== */
 #usage.using-paint-guard {
-  padding-top: 5rem;
-  padding-bottom: 10rem;
+  padding: 5rem 0 10rem;
   min-height: 100vh;
 }
-
-
 .card-img-top {
   max-width: 300px;
   width: 100%;
   height: 200px;
   object-fit: cover;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }
 .nav-tabs .nav-link {
   background-color: var(--secondary-color);
-  color: white;
+  color: #fff;
   border: none;
   padding: 1rem 2rem;
   font-weight: bold;
-  transition: background-color 0.3s ease;
 }
 .nav-tabs .nav-link:hover {
   background-color: rgba(var(--secondary-color-rgb), 0.9);
 }
 .nav-tabs .nav-link.active {
   background-color: var(--secondary-color-dark);
-  color: white;
-  border: none;
 }
-.tab-content .card .card-title,
-.card .card-title {
+.tab-content .card .card-title, .card .card-title {
   font-family: 'Fira Sans', sans-serif;
-}
-#usage {
-  background-size: cover;
-  background-position: center;
-  padding-bottom: 5rem;
-  min-height: 100vh;
 }
 .heading-wrapper {
   margin-bottom: 4rem;
 }
 
-
-
-
 /* ==========================================================================
    SHOP PAINT GUARD SECTION
    ========================================================================== */
 #shop.shop-section {
-  padding-top: 5rem;
-  padding-bottom: 10rem;
+  padding: 5rem 0 10rem;
   min-height: 100vh;
 }
 .card-img-top {
@@ -516,27 +436,20 @@ html, body {
 .card {
   min-height: 400px;
 }
-
 #shop h2 {
-  padding-bottom: 4rem; /* or any custom value */
+  padding-bottom: 4rem;
 }
 
 /* ==========================================================================
    PAINT GUARD SPECS SECTION
    ========================================================================== */
 #paint-guard-specifications.paint-gaurdspcs {
-  padding-top: 5rem;
-  padding-bottom: 10rem;
+  padding: 5rem 0 10rem;
   min-height: 100vh;
 }
-
 #paint-guard-specifications h2 {
-  padding-bottom: 4rem; /* or any custom value */
+  padding-bottom: 4rem;
 }
-
-    
-    
-    
 
 /* ==========================================================================
    DYNAMIC WORDS & SQUIGGLY LINE ANIMATION
@@ -574,71 +487,53 @@ html, body {
   width: 40px;
   height: 40px;
   display: flex;
-  background-color: #ffffff;
+  background-color: #fff;
   color: #D77F1B;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  transition: background-color 0.3s ease;
 }
 .social-icon:hover {
   background-color: #D77F1B;
-  color: white;
+  color: #fff;
 }
-
 
 /* ==========================================================================
    SHOP SUCCESSFUL
    ========================================================================== */
 #successful.success {
-  padding-top: 10rem;
-  padding-bottom: 10rem;
+  padding: 10rem 0;
   min-height: 100vh;
 }
-
-
 
 /* ==========================================================================
    SHOP CANCELLED
-    ========================================================================== */
+   ========================================================================== */
 #UserCancel.cancelled {
-  padding-top: 10rem;
-  padding-bottom: 10rem;
+  padding: 10rem 0;
   min-height: 100vh;
 }
-
-
-
 
 /* ==========================================================================
    TERMS AND CONDITIONS
-    ========================================================================== */
+   ========================================================================== */
 #terms-conditions.policy {
-  padding-top: 10rem;
-  padding-bottom: 10rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding: 10rem 2rem;
   min-height: 100vh;
 }
-
 
 /* ==========================================================================
    MAINTENANCE
-    ========================================================================== */
+   ========================================================================== */
 #under_maintenance.maintenance {
-  padding-top: 10rem;
-  padding-bottom: 10rem;
-  padding-left: 10rem;
-  padding-right: 10rem;
+  padding: 10rem;
   min-height: 100vh;
 }
 
-
 /* ==========================================================================
    THANKYOU SECTION
-    ========================================================================== */
+   ========================================================================== */
 #thk-you.thank-you {
-  padding-top: 10rem;
-  padding-bottom: 10rem;
+  padding: 10rem 0;
   min-height: 100vh;
 }
