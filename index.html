@@ -71,15 +71,20 @@
         </div>
     </div>
     <section id="hero">
+        <!-- Preconnect to YouTube for faster loading -->
+        <link rel="preconnect" href="https://www.youtube.com">
+        <link rel="preconnect" href="https://www.ytimg.com">
         <div class="video-background">
-            <video autoplay muted loop playsinline poster="assets/img/hero-image.webp">
-                <source src="assets/videos/hero-video.webm" type="video/webm">
-                <source src="assets/videos/hero-video.mp4" type="video/mp4"> <!-- Add fallback -->
-            </video>
+            <iframe
+                src="https://www.youtube.com/embed/ZCEfaMPc5Hw?autoplay=1&loop=1&playlist=ZCEfaMPc5Hw&controls=0&rel=0&modestbranding=1&mute=1&iv_load_policy=3"
+                frameborder="0"
+                allow="autoplay; encrypted-media"
+                allowfullscreen
+                poster="assets/img/hero-image.webp"
+            ></iframe>
             <div class="overlay"></div>
         </div>
         <div class="hero-content">
-            
             <div class="d-flex logos mb-4">
                 <img src="assets/img/PaintGuardMaskYellow.png" alt="Yellow Mask Logo" class="logo">
                 <img src="assets/img/paint-guard-logo.png" alt="Main Logo" class="logo">
@@ -93,7 +98,7 @@
                 <a class="btn btn-dark fs-3 shadow rounded-circle p-3" role="button" href="#about-paint-guard"><i class="bi bi-arrow-down"></i></a>
             </div>
         </div>
-    </section>   
+    </section>
     <section id="about-paint-guard" class="paint-guard-info">
         <div class="container">
             <div class="heading-wrapper">
@@ -358,7 +363,6 @@
             </div>
         </div>
     </section>
-    
     <section id="video-section" class="video-instruction bg-dark-blue">
         <div class="container-fluid h-100">
             <div class="row justify-content-center align-items-center h-100">
