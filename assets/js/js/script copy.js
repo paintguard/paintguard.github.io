@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
   const functionBaseUrl = isLocal
     ? '/.netlify/functions' // For local testing with netlify dev
-    : 'https://paint-gh.netlify.app/.netlify/functions'; // 
+    : 'https://preeminent-heliotrope-e43230.netlify.app/.netlify/functions'; // Production Netlify site
 
   // Fetch and display prices from Stripe
   async function loadPrices() {
@@ -54,7 +54,61 @@ document.addEventListener("DOMContentLoaded", function () {
     console.error('Lightbox failed to load - check script order');
   }
 
-    // Dynamic adjective switcher for hero section
+  // Video Modal Logic
+  const videoModalElement = document.getElementById("videoModal");
+  if (!videoModalElement) {
+    console.warn("Video modal not found - skipping modal setup");
+  } else {
+    const videoModal = new bootstrap.Modal(videoModalElement);
+    const mainVideo = document.getElementById("mainVideo");
+    
+    const playButton = document.querySelector(".play-button");
+    if (playButton) {
+      playButton.addEventListener("click", function (event) {
+        event.preventDefault();
+        videoModal.show();
+      });
+    }
+    
+    videoModalElement.addEventListener("shown.bs.modal", function () {
+      if (mainVideo) {
+        mainVideo.muted = true;
+        mainVideo.volume = 0;
+        mainVideo.play().catch(function (error) {
+          console.warn("Video autoplay failed:", error);
+        });
+      }
+    });
+    
+    videoModalElement.addEventListener("hidden.bs.modal", function () {
+      if (mainVideo) {
+        mainVideo.pause();
+      }
+    });
+  }
+  
+  // Safari-specific fix: Force mute on background video
+  const bgVideo = document.getElementById("bg-video");
+  if (bgVideo) {
+    bgVideo.muted = true;
+    bgVideo.volume = 0;
+    
+    bgVideo.addEventListener("play", () => {
+      if (!bgVideo.muted || bgVideo.volume > 0) {
+        bgVideo.muted = true;
+        bgVideo.volume = 0;
+      }
+    });
+    
+    bgVideo.addEventListener("volumechange", () => {
+      if (!bgVideo.muted || bgVideo.volume > 0) {
+        bgVideo.muted = true;
+        bgVideo.volume = 0;
+      }
+    });
+  }
+  
+  // Dynamic adjective switcher for hero section
   const words = ["Neat", "Fast", "Best", "Smart"];
   let i = 0;
 
