@@ -8,43 +8,290 @@
   --secondary-color-dark: #cc8400;  /* Darker orange */
 }
 
+/* Smooth Scrowling */
+a.scrolling {
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+html {
+  
+  scroll-behavior: smooth !important;
+}
+
 /* ==========================================================================
-   BOOTSTRAP OFF CANVAS MENU WIDTH, OPACITY AND TEXT COLOUR
+   SIMPLE & STYLISH OFFCANVAS MENU - PAINT GUARD STYLE
    ========================================================================== */
     
-    .offcanvas {
-      
-      --bs-offcanvas-width: 250px !important;
-      opacity: 0.9;
-      color: #161543 !important;
-      
-    }
+.offcanvas {
+  --bs-offcanvas-width: 280px !important;
+  color: #ffffff !important;
+  opacity: 0.96;
+  display: flex;
+  flex-direction: column;
+}
 
-.offcanvas-body .nav-link {
+.offcanvas.offcanvas-start {
+  background-color: #201c40 !important; /* Your dark purple */
+  border: none;
+}
+
+/* Header Styling */
+.offcanvas-header {
+  background-color: #201c40;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1.5rem 1.25rem;
+}
+
+.offcanvas-title {
+  color: #ffffff !important;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.btn-close-white {
+  filter: brightness(0) invert(1);
+  opacity: 0.8;
+}
+
+.btn-close-white:hover {
+  opacity: 1;
+}
+
+/* Body Layout */
+.offcanvas-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0;
+  min-height: 0;
+}
+
+/* Logo Section */
+.offcanvas-logo {
+  text-align: center;
+  padding: 2rem 1.5rem 2.5rem; /* Added extra bottom padding */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.offcanvas-logo .logo-image {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 1rem;
+}
+
+.offcanvas-logo .brand-text {
+  color: #ffffff !important;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+/* Navigation Menu */
+.offcanvas .nav {
+  padding: 3rem 0 0 0; /* Added top padding for space after logo */
+  flex-grow: 1;
+}
+
+.offcanvas .nav-item {
+  margin: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.offcanvas .nav-item:last-child {
+  border-bottom: none;
+}
+
+.offcanvas .nav-link {
+  color: #ffffff !important;
+  font-size: 1.1rem;
+  font-weight: 400;
+  padding: 1.25rem 1.5rem;
+  border: none !important;
+  outline: none !important;
+  text-decoration: none;
+  background: transparent;
+}
+
+.offcanvas .nav-link:hover {
+  color: #ffffff !important;
+  background: transparent; /* No background change */
+}
+
+.offcanvas .nav-link:focus {
+  outline: none !important;
+  background: transparent; /* No background change */
+}
+
+.offcanvas .nav-link.active,
+.offcanvas .current-menu-item .nav-link {
+  background: transparent !important; /* No background change */
+  color: #ffffff !important;
+}
+
+/* Social Icons Section */
+.offcanvas-social {
+  margin-top: auto;
+  padding: 2rem 1.5rem;
+  display: flex !important;
+  justify-content: center;
+  gap: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.offcanvas-social .social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  color: #f29c01 !important;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  text-decoration: none !important;
+  font-size: 1.1rem;
+}
+
+.offcanvas-social .social-icon:hover {
+  background: transparent; /* No background change */
+  border-color: rgba(255, 255, 255, 0.3); /* Keep same border */
+  color: #ffffff !important;
+}
+
+.offcanvas-social .social-icon:focus {
+  outline: none !important;
+  background: transparent; /* No background change */
+}
+
+/* Remove all animations and transitions for a static feel */
+.offcanvas * {
+  outline: none !important;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 576px) {
+  .offcanvas {
+    --bs-offcanvas-width: 260px !important;
+  }
   
-      color: #161543 !important;
+  .offcanvas-logo .brand-text {
+    font-size: 1.2rem;
+  }
+  
+  .offcanvas .nav-link {
+    font-size: 1rem;
+    padding: 1rem 1.25rem;
+  }
+}
+
+/* Backdrop */
+.offcanvas-backdrop {
+  background-color: rgba(0, 0, 0, 0.5) !important;
 }
 
 
-@media (max-width: 991.98px) {
-      .social-icons {
-        display: none !important; /* Hide icons on mobile */
-    }
+
+
+/* ==========================================================================
+   NAV-BAR & LOGO
+   ========================================================================== */
+.navbar-brand {
+  margin-left: 1rem;
 }
-    
-/* Ensure social icons are aligned and don’t stack */
+
+
+/* Nav Link Color Override */
+.navbar-nav .nav-link,
+.nav-link,
+a.nav-link {
+  color: #201c42 !important;
+}
+
+/* Nav Link Hover State */
+.navbar-nav .nav-link:hover,
+.nav-link:hover,
+a.nav-link:hover {
+  color: #f29c03 !important; /* Orange hover */
+}
+
+/* Nav Link Visited State */
+.navbar-nav .nav-link:visited,
+.nav-link:visited,
+a.nav-link:visited {
+  color: #201c42 !important; /* Orange visited */
+}
+
+
+
+/* Nav Link Active/Current State */
+
+
+.navbar-nav .nav-link.active,
+.nav-link.active,
+a.nav-link.active,
+.current-menu-item .nav-link {
+  color: #201c42 !important; 
+}
+  
+
+
+
+
+
+
+/* Nav Link Focus State (for accessibility) */
+.navbar-nav .nav-link:focus,
+.nav-link:focus,
+a.nav-link:focus {
+  color: #201c42 !important;
+  outline: 2px solid #f29c03;
+  outline-offset: 2px;
+}
+
+
+
 .social-icons {
-      display: flex;
-      gap: 10px; /* Space between icons */
-    
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none!important; /* remove the underscore */
 }
 
-.social-icons a {
-      color: #333; /* Icon color */
-      font-size: 1.2rem; /* Icon size */
-    
+/* New: Override media query to ensure offcanvas social icons are visible */
+@media (max-width: 991.98px) {
+  .social-icons {
+    display: none !important; /* Hide icons on mobile, except in offcanvas */
+  }
+  .offcanvas .social-icons {
+    display: flex !important; /* Ensure offcanvas social icons are visible */
+  }
 }
 
+.social-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  background-color: #ffffff; /* White background for icons */
+  color: #D77F1B; /* Orange icon color */
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+  text-decoration: none!important; /* remove the underscore */
+}
+
+.social-icon:hover {
+  background-color: #D77F1B;
+  color: white;
+}
+
+/* New: Ensure Font Awesome icons in offcanvas social icons are sized appropriately */
+.offcanvas-social .social-icon i {
+  font-size: 1.2rem; /* Matches .social-icons a font-size */
+}
 
 /* ==========================================================================
    BACKGROUND & UTILITY CLASSES
@@ -172,7 +419,7 @@
 .fancy-box {
   background-color: #f8f9fa;
   padding: 1rem;
-  border-radius: 0.5rem;
+  border-radius: 0 bite.5rem;
   transition: all 0.3s ease;
 }
 .fancy-box:hover {
@@ -243,6 +490,13 @@
   max-height: 80px;
 }
 
+.btn.btn-custom-orange {
+  background-color: #f29c03 !important;
+  border-color: #f29c03 !important;
+}
+
+
+
 /* ==========================================================================
    RESPONSIVE ADJUSTMENTS
    ========================================================================== */
@@ -283,28 +537,12 @@
     padding-bottom: 4rem;
     min-height: auto;
   }
-  
   #paint-guard-specifications.paint-gaurdspcs {
     padding-top: 4rem;
     padding-bottom: 4rem;
     min-height: auto;
   }
-  
-  
-  
-  
-  
 }
-@media (max-width: 992px) {
-  .navbar-brand {
-    margin: 0 auto;
-  }
-  .nav-bar-space {
-    margin-left: 0;
-  }
-}
-
-
 /* ==========================================================================
    TYPOGRAPHY & FONT STYLES
    ========================================================================== */
@@ -322,79 +560,6 @@ html, body {
   overflow-x: hidden;
 }
 
-/* ==========================================================================
-   VIDEO SECTION
-   ========================================================================== */
-    
-#video-section.video-instruction {
-  padding-top: 0rem;
-  padding-bottom: 0rem;
-  min-height: 100dvh; /* Dynamic viewport height for better mobile support */
-  height: 100%; /* Ensure it takes full height of parent */
-  color: white;
-  position: relative;
-  display: flex; /* Use flex to ensure children stretch */
-  flex-direction: column;
-}
-
-.container-fluid.h-100 {
-  height: 100%;
-  flex: 1; /* Grow to fill the parent */
-}
-
-.row {
-  height: 100%;
-}
-
-.col-12 {
-  height: 100%;
-}
-
-.video-wrapper {
-  position: relative;
-  overflow: hidden;
-  border-radius: 10px;
-  height: 100%;
-}
-
-.video-wrapper iframe {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.overlay-bg-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(48, 176, 244, 0.8);
-  pointer-events: none;
-  z-index: 1;
-}
-
-.play-button {
-  z-index: 10;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  color: white;
-  background-color: transparent;
-  border-radius: 50%;
-  transition: transform 0.3s ease;
-}
-
-.play-button:hover {
-  transform: scale(1.1);
-}
-
-.play-button p {
-  margin-top: 0.5rem;
-  font-size: 1.2rem;
-}
 
 
 /* ==========================================================================
@@ -407,7 +572,6 @@ html, body {
 }
 .faq-box,
 .contact-box {
-  
   padding-top: 5rem;
   padding-left: 0;
   padding-right: 0;
@@ -415,15 +579,12 @@ html, body {
 
 @media (min-width: 768px) {
   .faq-box {
-    
     padding-right: 1rem;
   }
   .contact-box {
-    
     padding-left: 1rem;
   }
 }
-
 
 .faq-box .bg-white,
 .contact-box .bg-white {
@@ -448,59 +609,6 @@ html, body {
   min-height: 100vh;
 }
 
-
-/* ==========================================================================
-   USING PAINT GUARD SECTION - TABBED CONTENT - INSTRUCTIONS
-   ========================================================================== */
-#usage.using-paint-guard {
-  padding-top: 5rem;
-  padding-bottom: 10rem;
-  min-height: 100vh;
-}
-
-
-.card-img-top {
-  max-width: 300px;
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-.nav-tabs .nav-link {
-  background-color: var(--secondary-color);
-  color: white;
-  border: none;
-  padding: 1rem 2rem;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-}
-.nav-tabs .nav-link:hover {
-  background-color: rgba(var(--secondary-color-rgb), 0.9);
-}
-.nav-tabs .nav-link.active {
-  background-color: var(--secondary-color-dark);
-  color: white;
-  border: none;
-}
-.tab-content .card .card-title,
-.card .card-title {
-  font-family: 'Fira Sans', sans-serif;
-}
-#usage {
-  background-size: cover;
-  background-position: center;
-  padding-bottom: 5rem;
-  min-height: 100vh;
-}
-.heading-wrapper {
-  margin-bottom: 4rem;
-}
-
-
-
-
 /* ==========================================================================
    SHOP PAINT GUARD SECTION
    ========================================================================== */
@@ -509,17 +617,33 @@ html, body {
   padding-bottom: 10rem;
   min-height: 100vh;
 }
-.card-img-top {
-  height: 300px;
-  object-fit: cover;
-}
+
+
 .card {
   min-height: 400px;
+}
+
+.card-body {
+  padding-bottom: 2rem; /* Adds space below the button */
 }
 
 #shop h2 {
   padding-bottom: 4rem; /* or any custom value */
 }
+
+
+.card-img-top {
+  max-width: 220px;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  margin-top: 20px; /* place immge doen from sitting flush at top of card */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
 
 /* ==========================================================================
    PAINT GUARD SPECS SECTION
@@ -533,10 +657,6 @@ html, body {
 #paint-guard-specifications h2 {
   padding-bottom: 4rem; /* or any custom value */
 }
-
-    
-    
-    
 
 /* ==========================================================================
    DYNAMIC WORDS & SQUIGGLY LINE ANIMATION
@@ -580,12 +700,12 @@ html, body {
   justify-content: center;
   border-radius: 50%;
   transition: background-color 0.3s ease;
+  text-decoration: none!important; /* remove the underscore */
 }
 .social-icon:hover {
   background-color: #D77F1B;
   color: white;
 }
-
 
 /* ==========================================================================
    SHOP SUCCESSFUL
@@ -596,23 +716,18 @@ html, body {
   min-height: 100vh;
 }
 
-
-
 /* ==========================================================================
    SHOP CANCELLED
-    ========================================================================== */
+   ========================================================================== */
 #UserCancel.cancelled {
   padding-top: 10rem;
   padding-bottom: 10rem;
   min-height: 100vh;
 }
 
-
-
-
 /* ==========================================================================
    TERMS AND CONDITIONS
-    ========================================================================== */
+   ========================================================================== */
 #terms-conditions.policy {
   padding-top: 10rem;
   padding-bottom: 10rem;
@@ -621,10 +736,9 @@ html, body {
   min-height: 100vh;
 }
 
-
 /* ==========================================================================
    MAINTENANCE
-    ========================================================================== */
+   ========================================================================== */
 #under_maintenance.maintenance {
   padding-top: 10rem;
   padding-bottom: 10rem;
@@ -633,12 +747,496 @@ html, body {
   min-height: 100vh;
 }
 
-
 /* ==========================================================================
    THANKYOU SECTION
-    ========================================================================== */
+   ========================================================================== */
 #thk-you.thank-you {
   padding-top: 10rem;
   padding-bottom: 10rem;
   min-height: 100vh;
+}
+
+.offcanvas-logo {
+  text-align: center;
+  padding: 5px 0;
+}
+
+.logo-image {
+  height: 60px;
+  width: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Tabs */
+.nav-tabs {
+  border: none;
+  gap: 1rem;
+}
+
+
+
+
+  
+  /*  Footer */
+  
+  
+  
+  .social-icon-ft {
+    
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    /*background-color: #ffffff !important; */
+    background: transparent;
+    color: #D77F1B !important; 
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    text-decoration: none !important;
+    transition: background-color 0.3s ease;
+    
+  }
+  
+  
+  .social-icon-ft:hover {
+    background-color: #f1f1f1 !important; /* Optional hover effect */
+  }
+
+
+/* Paint Guard Instructions Section - Bootstrap 5 Enhanced */
+#paint-guard-instructions {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  min-height: 100vh;
+}
+
+/* Custom Tab Button Styling */
+.instruction-tab-btn {
+  background-color: #f29c00 !important;
+  border-color: #f29c00 !important;
+  color: white !important;
+  padding: 1.25rem 2rem;
+  border-radius: 0.5rem !important;
+  font-weight: 600;
+  font-size: 0.875rem;
+  transition: all 0.3s ease;
+  min-width: 160px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0.25rem;
+}
+
+.instruction-tab-btn:hover {
+  background-color: #e08900 !important;
+  border-color: #e08900 !important;
+  color: white !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(242, 156, 0, 0.3);
+}
+
+.instruction-tab-btn.active {
+  background-color: #cc8400 !important;
+  border-color: #cc8400 !important;
+  color: white !important;
+  box-shadow: 0 4px 12px rgba(204, 132, 0, 0.4);
+}
+
+.instruction-tab-btn i {
+  font-size: 1.5rem;
+}
+
+/* Card Enhancements */
+.instruction-card {
+  border-radius: 0.75rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.instruction-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15) !important;
+}
+
+.instruction-img {
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.instruction-card:hover .instruction-img {
+  transform: scale(1.05);
+}
+
+.instruction-card .card-header {
+  padding: 1rem 1.25rem;
+}
+
+.instruction-card .card-body {
+  padding: 1.25rem;
+}
+
+.instruction-card .card-text {
+  line-height: 1.6;
+  color: #6c757d;
+}
+
+/* Video Button Styling */
+.video-btn {
+  width: 80px;
+  height: 80px;
+  background-color: #f29c00 !important;
+  border-color: #f29c00 !important;
+  transition: all 0.3s ease;
+}
+
+.video-btn:hover {
+  background-color: #cc8400 !important;
+  border-color: #cc8400 !important;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(242, 156, 0, 0.4) !important;
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+  #instructionTabs {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0.75rem;
+    max-width: 600px;
+    margin: 0 auto 3rem auto;
+    padding: 0 1.25rem;
+  }
+  
+  .instruction-tab-btn {
+    min-width: unset;
+    width: 100%;
+    padding: 1.25rem 1rem;
+    font-size: 0.8125rem;
+    min-height: 100px;
+    justify-content: center;
+    margin: 0;
+  }
+  
+  .instruction-tab-btn i {
+    font-size: 1.2rem;
+    margin-bottom: 0.375rem;
+  }
+  
+  .display-5 {
+    font-size: 2rem !important;
+  }
+  
+  .display-6 {
+    font-size: 1.8rem !important;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+  #instructionTabs {
+    gap: 0.625rem;
+    padding: 0 1rem;
+  }
+  
+  .instruction-tab-btn {
+    padding: 1rem 0.75rem;
+    font-size: 0.75rem;
+    min-height: 90px;
+  }
+  
+  .instruction-tab-btn i {
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+  }
+}
+
+/* Large tablet adjustments */
+@media (max-width: 992px) and (min-width: 769px) {
+  .col-xl-3 {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+}
+
+/* Custom color for text-warning spans */
+.text-warning {
+  color: #f29c00 !important;
+}
+
+/* Ensure proper spacing */
+.nav-pills .nav-link {
+  margin: 0.25rem;
+}
+
+/* Fix for Bootstrap tab content */
+.tab-content > .tab-pane {
+  display: none;
+}
+
+.tab-content > .active {
+  display: block;
+}
+
+
+
+/* ==========================================================================
+  VIDEO SHOWCASE SECTION - WORDPRESS COMPATIBLE WITH !IMPORTANT
+  ========================================================================== */
+  
+/* Force full viewport styles with high specificity */
+#instruction-video-showcase.video-showcase-section {
+  height: 100vh !important;
+  height: 100dvh !important;
+  min-height: 100vh !important;
+  width: 100vw !important;
+  position: relative !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  color: white !important;
+  box-sizing: border-box !important;
+}
+
+#instruction-video-showcase .video-container-fluid {
+  height: 100% !important;
+  width: 100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  position: relative !important;
+  box-sizing: border-box !important;
+}
+
+#instruction-video-showcase .video-content-wrapper {
+  height: 100% !important;
+  width: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  position: relative !important;
+  box-sizing: border-box !important;
+}
+
+#instruction-video-showcase .video-display-area {
+  height: 100% !important;
+  width: 100% !important;
+  position: relative !important;
+  box-sizing: border-box !important;
+}
+
+/* Background Video Wrapper - Force positioning */
+#instruction-video-showcase .background-video-wrapper {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  overflow: hidden !important;
+  z-index: 1 !important;
+  box-sizing: border-box !important;
+}
+
+#instruction-video-showcase #intro-background-video {
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  width: 100vw !important;
+  height: 56.25vw !important;
+  min-height: 100vh !important;
+  min-height: 100dvh !important;
+  min-width: 177.78vh !important;
+  transform: translate(-50%, -50%) !important;
+  pointer-events: none !important;
+  border: none !important;
+  outline: none !important;
+  z-index: 1 !important;
+}
+
+/* Blue Overlay - Force visibility */
+#instruction-video-showcase .video-overlay-blue {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: rgba(48, 176, 244, 0.75) !important;
+  pointer-events: none !important;
+  z-index: 2 !important;
+  display: block !important;
+  visibility: visible !important;
+}
+
+/* Play Button Container - Force centering */
+#instruction-video-showcase .video-play-button-container {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  z-index: 10 !important;
+  pointer-events: auto !important;
+}
+
+#instruction-video-showcase .instruction-play-button {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-decoration: none !important;
+  color: white !important;
+  background-color: transparent !important;
+  border: none !important;
+  transition: all 0.3s ease !important;
+  cursor: pointer !important;
+  padding: 2rem !important;
+  z-index: 11 !important;
+  pointer-events: auto !important;
+}
+
+#instruction-video-showcase .instruction-play-button:hover {
+  color: white !important;
+  text-decoration: none !important;
+  transform: scale(1.1) !important;
+}
+
+#instruction-video-showcase .play-button-icon {
+  display: block !important;
+  margin-bottom: 1rem !important;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3)) !important;
+}
+
+#instruction-video-showcase .instruction-play-button p {
+  margin: 0 !important;
+  font-size: 1.5rem !important;
+  font-weight: 600 !important;
+  text-align: center !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5) !important;
+  line-height: 1.2 !important;
+  color: white !important;
+}
+
+/* Modal Styles */
+#instructionVideoModal .modal-content {
+  height: 100vh !important;
+  height: 100dvh !important;
+  background-color: #000 !important;
+}
+
+#instructionVideoModal .modal-body {
+  height: 100% !important;
+  padding: 0 !important;
+}
+
+#instructionVideoModal .fullscreen-video-wrapper {
+  width: 100% !important;
+  height: 100% !important;
+  position: relative !important;
+}
+
+#instructionVideoModal #main-instruction-video {
+  width: 100% !important;
+  height: 100% !important;
+  border: none !important;
+  outline: none !important;
+}
+
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+  #instruction-video-showcase .play-button-icon svg {
+    width: 60px !important;
+    height: 60px !important;
+  }
+  
+  #instruction-video-showcase .instruction-play-button p {
+    font-size: 1.2rem !important;
+  }
+  
+  #instruction-video-showcase .instruction-play-button {
+    padding: 1rem !important;
+  }
+  
+  #instruction-video-showcase #intro-background-video {
+    height: 177.78vw !important;
+    min-height: 100vh !important;
+    min-height: 100dvh !important;
+  }
+}
+
+@media (max-width: 480px) {
+  #instruction-video-showcase .play-button-icon svg {
+    width: 50px !important;
+    height: 50px !important;
+  }
+  
+  #instruction-video-showcase .instruction-play-button p {
+    font-size: 1rem !important;
+  }
+}
+
+/* Override any theme styles that might interfere */
+#instruction-video-showcase * {
+  box-sizing: border-box !important;
+}
+
+/* Ensure no WordPress theme interference */
+.video-showcase-section {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  max-width: none !important;
+  width: 100vw !important;
+}
+
+/* Fix for WordPress container classes */
+#instruction-video-showcase .container,
+#instruction-video-showcase .container-fluid {
+  max-width: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 100% !important;
+}
+
+
+.bg-paintG{
+
+  background-color: rgb(31 29 66) !important;
+}
+
+/* Ct Bubble */
+.chat-bubble {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+    .chat-menu {
+      position: absolute;
+      bottom: 70px;
+      right: 0;
+      display: none;
+      flex-direction: column;
+      width: 200px;
+    }
+    .chat-menu.show {
+      display: flex;
+    }
+    .chat-menu a {
+      text-decoration: none;
+      border-bottom: 1px solid #e9ecef;
+    }
+    .chat-menu a:last-child {
+      border-bottom: none;
+    }
+
+.bg-colour{
+  
+  background-color: #f29c03 !important;
 }
