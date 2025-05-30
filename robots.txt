@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://paintguard.uk/sitemap.xml
