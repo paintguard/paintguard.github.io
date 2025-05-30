@@ -1,50 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <url>
-        <loc>https://paintguard</url>
+        <loc>https://paintguard.uk/</loc>
         <lastmod>2025-05-30</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <url>
-            <loc>https://paintguard</OurPolicy.html>
-            <lastmod>2025-05-25</lastmod>
-            <changefreq>monthly</changefreq>
-            <priority>0.8</priority>
-        </url>
+        <loc>https://paintguard.uk/OurPolicy.html</loc>
+        <lastmod>2025-05-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
     </url>
     <url>
-        <url>
-            <loc>https://paintguard</cancel.html>
-            <lastmod>2025-05-20</lastmod>
-            <changefreq>yearly</changefreq>
-            <priority>0.6</priority>
-        </url>
+        <loc>https://paintguard.uk/cancel.html</loc>
+        <lastmod>2025-05-20</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.6</priority>
     </url>
     <url>
-        <url>
-            <loc>https://paintguard</indexPause.html>
-            <lastmod>2025-05-20</lastmod>
-            <changefreq>yearly</changefreq>
-            <priority>0.6</priority>
-        </url>
+        <loc>https://paintguard.uk/indexPause.html</loc>
+        <lastmod>2025-05-20</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.6</priority>
     </url>
     <url>
-        <url>
-            <loc>https://paintguard</success.html>
-            <lastmod>2025-05-20</lastmod>
-            <changefreq>yearly</changefreq>
-            <priority>0.6</priority>
-        </url>
+        <loc>https://paintguard.uk/success.html</loc>
+        <lastmod>2025-05-20</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.6</priority>
     </url>
     <url>
-        <url>
-            <loc>https://paintguard</thankyou.html>
-            <lastmod>2025-05-20</lastmod>
-            <changefreq>yearly</changefreq>
-            <priority>0.6</priority>
-        </url>
+        <loc>https://paintguard.uk/thankyou.html</loc>
+        <lastmod>2025-05-20</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.6</priority>
     </url>
 </urlset>
