@@ -1,7 +1,7 @@
 User-agent: *
 Disallow: /cancel.html
 Disallow: /success.html
-Disallow: /thank-you.html
+Disallow: /thankyou.html
 Disallow: /OurPolicy.html
 Allow: /
 
