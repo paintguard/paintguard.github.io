@@ -3,6 +3,7 @@ Disallow: /cancel.html
 Disallow: /success.html
 Disallow: /thankyou.html
 Disallow: /OurPolicy.html
+Disallow: /indexPause.html
 Allow: /
 
 Sitemap: https://paintguard.uk/sitemap.xml
