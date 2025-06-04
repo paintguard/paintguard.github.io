@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Cloudflare Worker base URL (replace with your Worker URL)
-  const WORKER_BASE_URL = 'https://my-worker.paintguardtool.workers.dev';
+  const WORKER_BASE_URL = 'my-worker.paintguardtool.workers.dev';
 
   // Fetch and display prices from Stripe
   async function loadPrices() {
