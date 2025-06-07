@@ -27,7 +27,7 @@ function createLaunchOverlay() {
 function loadOverlayCSS() {
   const link = document.createElement('link');
   link.rel = 'stylesheet';
-  link.href = 'overlay.css';
+  link.href = 'assets/css/overlay.css';
   document.head.appendChild(link);
 }
 
