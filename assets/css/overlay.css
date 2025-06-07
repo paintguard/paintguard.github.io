@@ -1,0 +1,42 @@
+/* Overlay styling for blur effect and centered content */
+#launch-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+  backdrop-filter: blur(5px); /* Blur effect */
+  -webkit-backdrop-filter: blur(5px); /* For Safari compatibility */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Ensure overlay is on top */
+}
+
+/* Logo styling */
+#launch-logo {
+  max-width: 200px; /* Adjust size as needed */
+  margin-bottom: 20px;
+}
+
+/* Text styling */
+#launch-text {
+  color: white;
+  font-family: Arial, sans-serif;
+  font-size: 2.5em;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Shadow for readability */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  #launch-text {
+    font-size: 1.5em;
+  }
+  #launch-logo {
+    max-width: 150px;
+  }
+}
