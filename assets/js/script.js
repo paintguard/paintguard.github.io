@@ -298,7 +298,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const controller = new AbortController();
             const timeoutId = setTimeout(() => controller.abort(), 10000); // 10s timeout
             
-            const response = await fetch('https://my-worker.paintguardtool.workers.dev', {
+            const response = await fetch('https://my-form-worker.paintguardtool.workers.dev', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
