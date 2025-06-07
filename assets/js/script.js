@@ -155,22 +155,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-// Form validation (if you add a contact form later)
-function validateForm(form) {
-    const inputs = form.querySelectorAll('input[required], textarea[required]');
-    let isValid = true;
 
-    inputs.forEach(input => {
-        if (!input.value.trim()) {
-            input.classList.add('error');
-            isValid = false;
-        } else {
-            input.classList.remove('error');
-        }
-    });
-
-    return isValid;
-}
 
 // Lazy loading for images (optional enhancement)
 if ('IntersectionObserver' in window) {
@@ -247,6 +232,7 @@ document.addEventListener('DOMContentLoaded', function () {
             // Hide the modal
             videoModal.style.display = 'none';
 
+
             // Stop the video by removing the src
             youtubeIframe.src = '';
 
@@ -259,17 +245,101 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
-// Bootstrap form validation
-(function () {
-    'use strict';
-    const forms = document.querySelectorAll('.needs-validation');
-    Array.prototype.slice.call(forms).forEach(function (form) {
-        form.addEventListener('submit', function (event) {
-            if (!form.checkValidity()) {
-                event.preventDefault();
-                event.stopPropagation();
-            }
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('contact-form');
+    const formMessage = document.getElementById('form-message');
+    const submitButton = form?.querySelector('button[type="submit"]');
+    
+    if (!form || !formMessage || !submitButton) {
+        console.warn('Contact form or required elements not found');
+        return;
+    }
+    
+    form.addEventListener('submit', async function(event) {
+        event.preventDefault();
+        
+        // Reset previous messages
+        formMessage.classList.remove('alert', 'alert-success', 'alert-danger', 'd-none');
+        formMessage.textContent = '';
+        formMessage.setAttribute('aria-live', 'polite'); // Accessibility: Announce changes to screen readers
+        
+        // Client-side validation
+        if (!form.checkValidity()) {
             form.classList.add('was-validated');
-        }, false);
+            return;
+        }
+        
+        // Basic email format validation
+        const email = form.querySelector('#email').value;
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            form.classList.add('was-validated');
+            form.querySelector('#email').setCustomValidity('Invalid email format');
+            return;
+        } else {
+            form.querySelector('#email').setCustomValidity('');
+        }
+        
+        // Disable button and show loading state
+        submitButton.disabled = true;
+        submitButton.textContent = 'Sending...';
+        
+        // Prepare form data
+        const formData = new FormData(form);
+        const data = {
+            name: formData.get('name'),
+            email: formData.get('email'),
+            message: formData.get('message'),
+            botField: formData.get('bot-field')
+        };
+        
+        try {
+            // Add timeout to fetch request
+            const controller = new AbortController();
+            const timeoutId = setTimeout(() => controller.abort(), 10000); // 10s timeout
+            
+            const response = await fetch('https://my-worker.paintguardtool.workers.dev', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+                signal: controller.signal
+            });
+            
+            clearTimeout(timeoutId);
+            
+            const result = await response.json();
+            
+            if (response.ok) {
+                formMessage.classList.add('alert', 'alert-success');
+                formMessage.textContent = 'Your message has been sent successfully!';
+                form.reset();
+                form.classList.remove('was-validated');
+            } else {
+                formMessage.classList.add('alert', 'alert-danger');
+                formMessage.textContent = result.message || 'Failed to send message. Please try again.';
+            }
+        } catch (error) {
+            formMessage.classList.add('alert', 'alert-danger');
+            formMessage.textContent = error.name === 'AbortError' 
+            ? 'Request timed out. Please try again.'
+            : 'An error occurred. Please try again later.';
+            console.error('Form submission error:', error);
+        } finally {
+            // Re-enable button
+            submitButton.disabled = false;
+            submitButton.textContent = 'Send Message';
+        }
+        
+        formMessage.classList.remove('d-none');
+        formMessage.focus(); // Accessibility: Focus on message for screen readers
+        
+        // Clear message after 5 seconds
+        setTimeout(() => {
+            formMessage.classList.add('d-none');
+            formMessage.textContent = '';
+            formMessage.classList.remove('alert', 'alert-success', 'alert-danger');
+        }, 5000);
     });
-})();
+});
