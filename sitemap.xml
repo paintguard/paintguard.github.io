@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://www.paintguard.uk/index.html</loc>
+    <lastmod>2025-06-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.paintguard.uk/assets/img/blue-yellow-paint-guard.png</image:loc>
+      <image:title>Blue Yellow Paint Guard</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.paintguard.uk/assets/img/hero1.png</image:loc>
+      <image:title>Hero Image</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.paintguard.uk/assets/img/logo.png</image:loc>
+      <image:title>Logo</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.paintguard.uk/assets/img/logo2.png</image:loc>
+      <image:title>Logo 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.paintguard.uk/assets/img/paint-gaurd-yellow.png</image:loc>
+      <image:title>Paint Guard Yellow</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.paintguard.uk/assets/img/paint-gaurd-yellow03.png</image:loc>
+      <image:title>Paint Guard Yellow 03</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.paintguard.uk/assets/img/paint-gaurd-yellow2.png</image:loc>
+      <image:title>Paint Guard Yellow 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.paintguard.uk/assets/img/Paint-Guard-Blue-100mm.png</image:loc>
+      <image:title>Paint Guard Blue 100mm</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.paintguard.uk/assets/img/paint-guard-mask2.png</image:loc>
+      <image:title>Paint Guard Mask</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.paintguard.uk/assets/img/paint-guard-product.png</image:loc>
+      <image:title>Paint Guard Product</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.paintguard.uk/assets/img/paint-guard-promo.png</image:loc>
+      <image:title>Paint Guard Promo</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.paintguard.uk/assets/img/Paint-Guard-Yellow-90mm.png</image:loc>
+      <image:title>Paint Guard Yellow 90mm</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.paintguard.uk/assets/img/Paint-guard-yellow.png</image:loc>
+      <image:title>Paint Guard Yellow</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.paintguard.uk/assets/img/product-colour-size.png</image:loc>
+      <image:title>Product Colour Size</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.paintguard.uk/assets/img/trade-decorator.png</image:loc>
+      <image:title>Trade Decorator</image:title>
+    </image:image>
+  </url>
+</urlset>

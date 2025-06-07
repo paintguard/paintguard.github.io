@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /index.html
+Allow: /assets/img/
+Allow: /assets/favicon.ico
+Allow: /assets/favicon-16x16.png
+Allow: /assets/favicon-32x32.png
+Allow: /assets/favicon-192x192.png
+Allow: /assets/favicon.png
+Allow: /assets/android-chrome-192x192.png
+Disallow: /cancel.html
+Disallow: /form-reply.html
+Disallow: /index copy.html
+Disallow: /paint-guard-policy.html
+Disallow: /thankyou.html
+Disallow: /assets/css/
+Disallow: /assets/js/
+Sitemap: https://www.paintguard.uk/sitemap.xml
